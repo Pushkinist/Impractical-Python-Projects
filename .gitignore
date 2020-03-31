@@ -130,3 +130,6 @@ dmypy.json
 
 # VSCode Settings
 .vscode
+
+# Ignore dict file for Chapter 2
+2of4brif.txt
