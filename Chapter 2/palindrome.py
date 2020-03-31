@@ -1,7 +1,9 @@
+"""Simple palindrome solution."""
+
 import load_dictionary
 
-word_list = load_dictionary.load("2of4brif.txt")
+WORD_LIST = load_dictionary.load("2of4brif.txt")
 
-pali_list = [i for i in word_list if i == i[::-1]]
+PALI_LIST = [i for i in WORD_LIST if i == i[::-1]]
 
-print(*pali_list, sep="\n")
+print(*PALI_LIST, sep="\n")
