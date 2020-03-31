@@ -1,4 +1,5 @@
 """Load a text file as a list.
+
 Arguments:
 -text file name
 Exceptions:
@@ -17,9 +18,9 @@ def load(file):
             loaded_txt = in_file.read().strip().split("\n")
             loaded_txt = [x.lower() for x in loaded_txt]
             return loaded_txt
-    except IOError as e:
+    except IOError as exception:
         print(
-            "{}\nError opening {}. Terminating program.".format(e, file),
+            "{}\nError opening {}. Terminating program.".format(exception, file),
             file=sys.stderr,
         )
         sys.exit(1)
