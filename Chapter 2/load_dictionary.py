@@ -10,13 +10,19 @@ Requires-import sys
 """
 import sys
 
+possible_sigle_letter = ("a", "i")
+
 
 def load(file):
     """Open a text file & turn contents into a list of lowercase strings."""
     try:
         with open(file) as in_file:
             loaded_txt = in_file.read().strip().split("\n")
-            loaded_txt = [x.lower() for x in loaded_txt]
+            loaded_txt = [
+                x.lower()
+                for x in loaded_txt
+                if len(x) > 1 or x in possible_sigle_letter
+            ]
             return loaded_txt
     except IOError as exception:
         print(
