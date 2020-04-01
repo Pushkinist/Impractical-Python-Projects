@@ -10,7 +10,7 @@ Requires-import sys
 """
 import sys
 
-possible_sigle_letter = ("a", "i")
+POSSIBLE_SINGLE_LETTER = ("a", "i")
 
 
 def load(file):
@@ -21,7 +21,7 @@ def load(file):
             loaded_txt = [
                 x.lower()
                 for x in loaded_txt
-                if len(x) > 1 or x in possible_sigle_letter
+                if len(x) > 1 or x in POSSIBLE_SINGLE_LETTER
             ]
             return loaded_txt
     except IOError as exception:

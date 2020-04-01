@@ -1,3 +1,5 @@
+"""Simple cProfile example."""
+
 import cProfile
 import palingram
 
